@@ -1,0 +1,68 @@
+{
+  "ConvertTypes": {
+    "source": "csv",
+    "target": "csv"
+  },
+  "Mapping": [
+    {
+      "source_name": "Patient ID",
+      "target_name": "record_id",
+      "reference_key": "recordId",
+      "target_order": 1,
+      "type": "textual"
+    },
+    {
+      "source_name": "Gender",
+      "target_name": "gender",
+      "reference_key": "gender",
+      "target_order": 2,
+      "type": "textual",
+      "transform": "Male1Female2"
+    },
+    {
+      "source_name": "Length",
+      "target_name": "height_cm",
+      "reference_key": "height",
+      "target_order": 3,
+      "type": "numeric",
+      "transform": {
+        "operation": "*",
+        "number": 100
+      }
+    },
+    {
+      "source_name": "Weight",
+      "target_name": "weight_kg",
+      "reference_key": "weight",
+      "target_order": 4,
+      "type": "numeric"
+    },
+    {
+      "source_name": "Pregnant",
+      "target_name": "pregnant",
+      "reference_key": "pregnant",
+      "target_order": 5,
+      "type": "boolean",
+      "transform": "ZeroAndOne"
+    },
+    {
+      "source_name": "Months Pregnant",
+      "target_name": "pregnancy_duration_weeks",
+      "reference_key": "pregnancyDurationWeeks",
+      "target_order": 5,
+      "type": "numeric",
+      "transform": {
+        "operation": "*",
+        "number": 4
+      }
+    },
+    {
+      "source_name": "Date of diagnosis",
+      "target_name": "date_diagnosis",
+      "reference_key": "dateDiagnosis",
+      "target_order": 6,
+      "type": "date",
+      "transform": "Y-m-d"
+    }
+  ]
+}

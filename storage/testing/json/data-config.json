@@ -1,0 +1,30 @@
+{
+  "ConvertTypes": {
+    "source": "csv",
+    "target": "csv"
+  },
+  "Mapping": [
+    {
+      "source_name": "Patient ID",
+      "target_name": "record_id",
+      "reference_key": "recordId",
+      "target_order": 1,
+      "type": "textual"
+    },
+    {
+      "source_name": "Weight",
+      "target_name": "weight_kg",
+      "reference_key": "weight",
+      "target_order": 4,
+      "type": "numeric"
+    },
+    {
+      "source_name": "Pregnant",
+      "target_name": "pregnant",
+      "reference_key": "pregnant",
+      "target_order": 5,
+      "type": "boolean",
+      "transform": "ZeroAndOne"
+    }
+  ]
+}
